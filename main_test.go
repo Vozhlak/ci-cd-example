@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"os"
+	"testing"
+)
 
 func TestMaxInt(t *testing.T) {
 	a, b := 2, 7
@@ -13,5 +16,7 @@ func TestMaxInt(t *testing.T) {
 }
 
 func TestMain(m *testing.M) {
-	main()
+	exitCode := m.Run()
+
+	os.Exit(exitCode)
 }
